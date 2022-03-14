@@ -12,7 +12,7 @@ class BusinessNewsCubit extends Cubit<BusinessNewsEvents> {
   void getAllBusinessNews() {
     emit(GetLoadingBusinessNews());
     DioHelper.getHttp(url: newsEndPoint, query: {
-      'country': 'eg',
+      'country': 'us',
       'category': 'business',
       'apiKey': API_KEY,
     }).then((value) {

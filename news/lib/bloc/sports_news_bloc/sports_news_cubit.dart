@@ -12,7 +12,7 @@ class SportsNewsCubit extends Cubit<SportsNewsEvents> {
   void getAllSportsNews() {
     emit(GetLoadingSportsNews());
     DioHelper.getHttp(url: newsEndPoint, query: {
-      'country': 'eg',
+      'country': 'us',
       'category': 'sports',
       'apiKey': API_KEY,
     }).then((value) {
